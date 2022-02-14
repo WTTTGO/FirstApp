@@ -17,6 +17,7 @@
 		8833072727BA0AA900FBC1EC /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833072627BA0AA900FBC1EC /* WelcomeView.swift */; };
 		8833072927BA0ABF00FBC1EC /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833072827BA0ABF00FBC1EC /* ExerciseView.swift */; };
 		8833072C27BA0BCB00FBC1EC /* sparky.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 8833072B27BA0BCB00FBC1EC /* sparky.m4v */; };
+		8833072E27BA152A00FBC1EC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8833072D27BA152A00FBC1EC /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8833072627BA0AA900FBC1EC /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		8833072827BA0ABF00FBC1EC /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		8833072B27BA0BCB00FBC1EC /* sparky.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sparky.m4v; sourceTree = "<group>"; };
+		8833072D27BA152A00FBC1EC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			children = (
 				883306FA27BA071300FBC1EC /* ContentView.swift */,
 				8833072827BA0ABF00FBC1EC /* ExerciseView.swift */,
+				8833072D27BA152A00FBC1EC /* HeaderView.swift */,
 				8833072627BA0AA900FBC1EC /* WelcomeView.swift */,
 			);
 			path = Views;
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8833072E27BA152A00FBC1EC /* HeaderView.swift in Sources */,
 				8833072927BA0ABF00FBC1EC /* ExerciseView.swift in Sources */,
 				883306FB27BA071300FBC1EC /* ContentView.swift in Sources */,
 				8833072727BA0AA900FBC1EC /* WelcomeView.swift in Sources */,
