@@ -17,14 +17,14 @@ struct ExerciseView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                HeaderView(titleText: exerciseNames[index])
+                HeaderView(titleText: Exercise.exercises[index].exerciseName)
                     .padding(.bottom)
                 if let url = Bundle.main.url(
-                    forResource: videoNames[index],
+                    forResource: Exercise.exercises[index].videoName,
                     withExtension: "mp4") {
                     VideoPlayer(player: AVPlayer(url: url)).frame(height: geometry.size.height * 0.45)
                 } else {
-                    Text("Couldn’t find \(videoNames[index]).mp4")
+                    Text("Couldn’t find \(Exercise.exercises[index].videoName).mp4")
                         .foregroundColor(.red)
                 }
                 Text(Date().addingTimeInterval(interval), style: .timer)
@@ -32,7 +32,9 @@ struct ExerciseView: View {
                     .foregroundColor(Color.white)
                     .background(Color.black)
                     .cornerRadius(15.0)
-                Button("Start/Done") { }
+                Button(NSLocalizedString(
+                    "Start/Done",
+                    comment: "begin exercise / mark as finished")) { }
                     .font(.title3)
                     .padding()
                 RatingView()
