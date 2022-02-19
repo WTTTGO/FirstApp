@@ -8,23 +8,22 @@
 import SwiftUI
 
 struct SuccessView: View {
+    @Binding var selectedTab: Int
     let message = """
       Good job completing all four exercises!
         Remeber tomorrow's another day.
             So eat well and get some rest.
     """
+    @Environment(\.presentationMode) var presentationMode
     @State var isModalShowing = false
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
                 Button("Continue") {
-                    isModalShowing = true
+                    selectedTab = 9
+                    presentationMode.wrappedValue.dismiss()
                 }
-                 .padding(.bottom)
-                 .sheet(isPresented: $isModalShowing) {
-                     SuccessModal()
-                 }
             }
             VStack {
                 Image(systemName: "hand.raised.fill")
@@ -43,6 +42,6 @@ struct SuccessView: View {
 
 struct SuccessView_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessView()
+        SuccessView(selectedTab: .constant(3))
     }
 }

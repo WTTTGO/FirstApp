@@ -9,15 +9,22 @@ import SwiftUI
 import AVKit
 
 struct ExerciseView: View {
-    let videoNames = ["banana", "banana", "banana", "banana"]
-    let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
+    @Binding var selectedTab: Int
+    @State private var showHistory = false
+    @State private var showSuccess = false
+    @State private var rating = 0
     let index: Int
     let interval: TimeInterval = 30
     @State var showingAlert = false
+    var lastExercise: Bool {
+     index + 1 == Exercise.exercises.count
+    }
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                HeaderView(titleText: Exercise.exercises[index].exerciseName)
+                HeaderView(
+                 selectedTab: $selectedTab,
+                 titleText: Exercise.exercises[index].exerciseName)
                     .padding(.bottom)
                 if let url = Bundle.main.url(
                     forResource: Exercise.exercises[index].videoName,
@@ -32,20 +39,27 @@ struct ExerciseView: View {
                     .foregroundColor(Color.white)
                     .background(Color.black)
                     .cornerRadius(15.0)
-                Button(NSLocalizedString(
-                    "Start/Done",
-                    comment: "begin exercise / mark as finished")) { }
-                    .font(.title3)
-                    .padding()
-                RatingView()
+                HStack(spacing: 150) {
+                 Button("Start Exercise") { }
+                    Button("Done") {
+                     if lastExercise {
+                     showSuccess.toggle()
+                     } else {
+                     selectedTab += 1
+                     }
+                    }.sheet(isPresented: $showSuccess) {
+                        SuccessView(selectedTab: $selectedTab)
+                       }
+                }
+                RatingView(rating: $rating)
                     .padding()
                 Spacer()
                 Button("History") {
-                    showingAlert = true
+                 showHistory.toggle()
                 }
-                    .padding(.bottom)
-                    .alert("There is no history to show.", isPresented: $showingAlert) { Button("OK", role: .cancel) { }
-                    }
+                .sheet(isPresented: $showHistory) {
+                 HistoryView(showHistory: $showHistory)
+                }
             }
         }
     }
@@ -53,7 +67,7 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(index: 0)
+        ExerciseView(selectedTab: .constant(3), index: 3)
             .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }

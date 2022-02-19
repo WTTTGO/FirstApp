@@ -40,12 +40,12 @@ extension Exercise {
  videoName: "banana"),
  Exercise(
  exerciseName: String(describing: ExerciseEnum.stepUp),
- videoName: "step-up"),
+ videoName: "banana"),
  Exercise(
  exerciseName: String(describing: ExerciseEnum.burpee),
- videoName: "burpee"),
+ videoName: "banana"),
  Exercise(
  exerciseName: String(describing: ExerciseEnum.sunSalute),
- videoName: "sun-salute")
+ videoName: "banana")
  ]
 }
