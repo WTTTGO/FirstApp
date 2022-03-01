@@ -12,13 +12,12 @@ struct ExerciseView: View {
     @Binding var selectedTab: Int
     @State private var showHistory = false
     @State private var showSuccess = false
-    @State private var rating = 0
     let index: Int
     @State private var timerDone = false
     @State private var showTimer = false
     @State var showingAlert = false
     var lastExercise: Bool {
-     index + 1 == Exercise.exercises.count
+        index + 1 == Exercise.exercises.count
     }
     @EnvironmentObject var history: HistoryStore
     var body: some View {
@@ -57,7 +56,7 @@ struct ExerciseView: View {
                     TimerView(timerDone: $timerDone)
                 }
                 Spacer()
-                RatingView(rating: $rating)
+                RatingView(exerciseIndex: index)
                     .padding()
                 Button("History") {
                  showHistory.toggle()
