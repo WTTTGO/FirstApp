@@ -19,22 +19,24 @@ struct SuccessView: View {
     var body: some View {
         ZStack {
             VStack {
-                Spacer()
-                Button("Continue") {
-                    selectedTab = 9
-                    presentationMode.wrappedValue.dismiss()
-                }
-            }
-            VStack {
                 Image(systemName: "hand.raised.fill")
                     .resizedToFill(width: 75, height:75)
                     .foregroundColor(Color.purple)
                 Text("High Five!")
                     .font(.largeTitle)
-                    .bold()
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.heavy)
                 Text(message)
+                    .multilineTextAlignment(.center)
                     .foregroundColor(Color.gray)
+            }
+            
+            VStack {
+                Spacer()
+                Button("Continue") {
+                    selectedTab = 9
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .padding()
             }
         }
     }

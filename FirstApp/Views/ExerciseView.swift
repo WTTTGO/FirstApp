@@ -48,9 +48,11 @@ struct ExerciseView: View {
                         } else {
                             selectedTab += 1
                         }
-                    }.sheet(isPresented: $showSuccess) {
+                    }
+                    .disabled(!timerDone)
+                    .sheet(isPresented: $showSuccess) {
                         SuccessView(selectedTab: $selectedTab)
-                    }.disabled(!timerDone)
+                    }
                 }
                 if showTimer {
                     TimerView(timerDone: $timerDone)
