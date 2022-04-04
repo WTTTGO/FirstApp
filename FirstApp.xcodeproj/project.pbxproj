@@ -32,6 +32,12 @@
 		88D258EF27BA3320007AE9FF /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D258EE27BA3320007AE9FF /* ImageExtension.swift */; };
 		88D258F127BA34B3007AE9FF /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D258F027BA34B3007AE9FF /* SuccessView.swift */; };
 		88D258F327BA39C0007AE9FF /* SuccessModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D258F227BA39C0007AE9FF /* SuccessModal.swift */; };
+		88EA7AD427FB51AA0078D005 /* RaisedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA7AD327FB51AA0078D005 /* RaisedButton.swift */; };
+		88EA7AD627FB5CC90078D005 /* EmbossedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA7AD527FB5CC90078D005 /* EmbossedButton.swift */; };
+		88EA7AD827FB641F0078D005 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA7AD727FB641F0078D005 /* ContainerView.swift */; };
+		88EA7ADA27FB660F0078D005 /* WelcomeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA7AD927FB660F0078D005 /* WelcomeImages.swift */; };
+		88EA7ADC27FB66F60078D005 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA7ADB27FB66F60078D005 /* GradientBackground.swift */; };
+		88EA7ADE27FB699D0078D005 /* IndentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA7ADD27FB699D0078D005 /* IndentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +90,12 @@
 		88D258EE27BA3320007AE9FF /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		88D258F027BA34B3007AE9FF /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		88D258F227BA39C0007AE9FF /* SuccessModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessModal.swift; sourceTree = "<group>"; };
+		88EA7AD327FB51AA0078D005 /* RaisedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButton.swift; sourceTree = "<group>"; };
+		88EA7AD527FB5CC90078D005 /* EmbossedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbossedButton.swift; sourceTree = "<group>"; };
+		88EA7AD727FB641F0078D005 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		88EA7AD927FB660F0078D005 /* WelcomeImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeImages.swift; sourceTree = "<group>"; };
+		88EA7ADB27FB66F60078D005 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		88EA7ADD27FB699D0078D005 /* IndentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				883306FA27BA071300FBC1EC /* ContentView.swift */,
+				88EA7AD927FB660F0078D005 /* WelcomeImages.swift */,
 				88D258E627BA1F3E007AE9FF /* RatingView.swift */,
 				8833072827BA0ABF00FBC1EC /* ExerciseView.swift */,
 				88D258E827BA279A007AE9FF /* HistoryView.swift */,
@@ -188,6 +201,11 @@
 				88D258F027BA34B3007AE9FF /* SuccessView.swift */,
 				88D258F227BA39C0007AE9FF /* SuccessModal.swift */,
 				88C684E127CD9CA8006AE60A /* TimerView.swift */,
+				88EA7AD327FB51AA0078D005 /* RaisedButton.swift */,
+				88EA7AD527FB5CC90078D005 /* EmbossedButton.swift */,
+				88EA7AD727FB641F0078D005 /* ContainerView.swift */,
+				88EA7ADB27FB66F60078D005 /* GradientBackground.swift */,
+				88EA7ADD27FB699D0078D005 /* IndentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,19 +356,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				88C684E227CD9CA8006AE60A /* TimerView.swift in Sources */,
+				88EA7AD427FB51AA0078D005 /* RaisedButton.swift in Sources */,
+				88EA7AD827FB641F0078D005 /* ContainerView.swift in Sources */,
 				88D258E927BA279A007AE9FF /* HistoryView.swift in Sources */,
 				88D258EB27BA2E9D007AE9FF /* DateExtension.swift in Sources */,
+				88EA7ADC27FB66F60078D005 /* GradientBackground.swift in Sources */,
 				88D258F127BA34B3007AE9FF /* SuccessView.swift in Sources */,
 				8833072E27BA152A00FBC1EC /* HeaderView.swift in Sources */,
 				8833072927BA0ABF00FBC1EC /* ExerciseView.swift in Sources */,
+				88EA7ADA27FB660F0078D005 /* WelcomeImages.swift in Sources */,
 				88AA5F8427C081F400DD610E /* Exercise.swift in Sources */,
 				883306FB27BA071300FBC1EC /* ContentView.swift in Sources */,
 				88AA5F8727C083FB00DD610E /* HistoryStore.swift in Sources */,
 				88D258E727BA1F3E007AE9FF /* RatingView.swift in Sources */,
+				88EA7ADE27FB699D0078D005 /* IndentView.swift in Sources */,
 				88D258F327BA39C0007AE9FF /* SuccessModal.swift in Sources */,
 				88AA5F8927C086AD00DD610E /* HistoryStoreDevData.swift in Sources */,
 				8833072727BA0AA900FBC1EC /* WelcomeView.swift in Sources */,
 				88D258EF27BA3320007AE9FF /* ImageExtension.swift in Sources */,
+				88EA7AD627FB5CC90078D005 /* EmbossedButton.swift in Sources */,
 				883306F927BA071300FBC1EC /* FirstAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
